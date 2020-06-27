@@ -1,0 +1,23 @@
+{
+  "name": "percy-testcafe-starter-project",
+  "version": "1.0.0",
+  "description": "Percy.io/TestCafe visual testing example",
+  "scripts": {
+    "test": "cross-env-file-shell $(npm bin)/percy exec -h `ipconfig getifaddr en0` -- $(npm bin)/testcafe chrome tests/",
+    "test:pageLoop": "cross-env-file-shell $(npm bin)/percy exec -h `ipconfig getifaddr en0` -- $(npm bin)/testcafe chrome tests/pageLoopExample.test.js",
+    "test:pageInteraction": "cross-env-file-shell $(npm bin)/percy exec -h `ipconfig getifaddr en0` -- $(npm bin)/testcafe chrome tests/functionalTestExample.test.js"
+  },
+  "keywords": [
+    "Percy",
+    "Testcafe",
+    "Snapshot"
+  ],
+  "author": "Guy Mardell",
+  "dependencies": {
+    "@percy/testcafe": "0.2.0",
+    "testcafe": "1.8.2"
+  },
+  "devDependencies": {
+    "cross-env-file": "1.0.0"
+  }
+}
